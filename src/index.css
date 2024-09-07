@@ -109,3 +109,53 @@
       #000000 44%,
       #404040 93%);
 }
+.gradient_border{
+  background: linear-gradient(127deg,
+  #333333 0%,
+  #000000 44%,
+  #404040 93%) padding-box,
+  linear-gradient(127deg, #D6ACE1, #949AD1) border-box;
+border-radius: 50em;
+border: 2px solid transparent;
+  
+
+}
+
+.new{
+  background: linear-gradient(127deg,
+  #FFFFFF 0%,
+  #081038 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.gradient_card_bg_light{
+  background: linear-gradient(90deg,
+    #cfeeff65 0%,
+    #FFFFFF 63%,
+    #f4e9ff28 100%
+    );
+  
+  
+}
+.gradient_card_bg_dark{
+  background: linear-gradient(90deg,
+    #55b4e727 0%,
+    #ae6cff1a 63%,
+    #f4e9ff15 100%
+    );
+    border-color: transparent;
+}
+
+.morph_bg{
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.extra{
+  background: linear-gradient(to right,
+    #55b4e77a 0%,
+    #ae6cff98 63%,
+    #d8b2ff85 96%);
+}

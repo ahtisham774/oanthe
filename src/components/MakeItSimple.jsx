@@ -1,3 +1,4 @@
+import Button from "./button"
 
 const MakeItSimple = ({ mode }) => {
     const theme = {
@@ -16,8 +17,8 @@ const MakeItSimple = ({ mode }) => {
         },
     }
     return (
-        <div className={`w-full h-full py-8 px-4 lg:px-12`} >
-            <div className={`w-full  flex flex-col md:flex-row items-center justify-between  rounded-3xl ${theme[mode].bg} ${theme[mode].text} transition-all`}>
+        <div className={`w-full h-full py-8 px-4 lg:px-12 flex items-center justify-center`} >
+            <div className={`w-full  flex flex-col md:flex-row max-w-6xl items-center justify-between  rounded-3xl ${theme[mode].bg} ${theme[mode].text} transition-all`}>
                 <div className="w-full">
                     <img src="/assets/tiger.png" className="sm:max-w-[400px]" alt="" />
                 </div>
@@ -28,10 +29,7 @@ const MakeItSimple = ({ mode }) => {
                         <p className=" text-sm font-normal max-w-xs leading-relaxed w-full  text-center">
                             Unified <span className="mx-1 hero_gradient_text">JavaScript and CSS3</span>,  outstanding developer experience.
                         </p>
-                        <button className="flex items-center gap-2 py-2 px-4 border rounded-full text-white gradient_btn">
-                            <span className="text-sm font-semibold">Get Started</span>
-                            <img src="/assets/btn_lion.svg" className="w-8" alt="" />
-                        </button>
+                        <Button />
                     </div>
                 </div>
             </div>
