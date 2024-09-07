@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
- 
+
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87);
@@ -16,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,10 +24,18 @@
   font-weight: 400;
 }
 
-#fill{
-  background-color:#000
+#fill {
+  background-color: #000
 }
 
+
+.active_dark {
+  color: #fff;
+}
+
+.active_light {
+  color: #000;
+}
 
 #root {
   height: 100%;
@@ -35,6 +43,13 @@
   width: 100%;
 }
 
+.bg-hero {
+  /* background: #0000003d; */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.219) 0%, rgba(0, 0, 0, 0.26) 100%);
+  box-shadow:
+
+    0 20px 10px 0 rgba(0, 0, 0, 0.26);
+}
 
 .bg_light {
   background: url('/assets/bg_light.svg');
@@ -42,6 +57,15 @@
 
 .bg_dark {
   background: url('/assets/bg.svg');
+}
+
+.hero_gradient_text {
+  background: linear-gradient(127deg,
+      #55B3E7 0%,
+      #AD6CFF 63%,
+      #D9B2FF 96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -59,4 +83,29 @@
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+.gradient_title {
+  background: linear-gradient(127deg,
+      #97FFF3 0%,
+      #48CBF5 33%,
+      #5BA6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient_sub_title {
+  background: linear-gradient(127deg,
+      #55B3E7 0%,
+      #AD6CFF 63%,
+      #F4E9FF 96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient_btn {
+  background: linear-gradient(127deg,
+      #333333 0%,
+      #000000 44%,
+      #404040 93%);
 }

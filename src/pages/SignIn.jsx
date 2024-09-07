@@ -4,23 +4,27 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 
-import { Button, Checkbox, Input, Typography } from "@material-tailwind/react"
+
 import { MdClose } from "react-icons/md"
 
 
 export default function SignIn() {
 
-    const mode = "light"
+    const mode = "dark"
 
     const theme = {
         dark: {
             bg: "bg-black",
             text: "text-white",
+            heading: "text-white",
+            border: "border-[#6666667c]",
             bg_image: "bg_dark"
         },
         light: {
             bg: "bg-white",
-            text: "text-black",
+            border: "border-[#66666623]",
+            heading: "text-black",
+            text: "text-[#666666]",
             bg_image: "bg_light"
         }
     }
@@ -36,42 +40,41 @@ export default function SignIn() {
 
             <div className="bg-form_container w-full max-w-7xl min-h-[calc(100dvh-300px)] flex items-center justify-center rounded-2xl p-8 ">
                 <div className={`${theme[mode].bg} ${theme[mode].text}  p-8 rounded-xl w-full max-w-sm mx-auto relative `}>
-                    <div className="flex justify-end mb-4 z-[2]">
+                    <div className="flex justify-end mb-4 ">
                         <MdClose className=" cursor-pointer" />
                     </div>
 
-                    <Typography
-
-                        variant="h4"
-                        bold
-                        className="mb-6 text-inherit font-normal"
+                    <h1
+                        className={`mb-6 text-xl ${theme[mode].heading} font-bold`}
                     >
                         Sign in
-                    </Typography>
-                    <form className="space-y-6 z-[2]">
+                    </h1>
+                    <form className="space-y-6 ">
                         <div>
-                            {/* <label htmlFor="email" className="block text-white mb-2">
+                            <label htmlFor="email" className="block text-inherit mb-2">
                                 Email or phone number
-                            </label> */}
-                            <Input size="lg" color={`${mode === "dark" ? "white" : "black"}`} label="Email" />
+                            </label>
+                            <input className={`outline-none border-2 w-full p-2 ${theme[mode].border}  bg-transparent rounded-lg text-inherit`} type="email" />
                         </div>
                         <div>
                             <div className="flex items-center justify-end pb-2">
 
-                                <div className="flex items-center justify-between gap-2">
-                                    <EyeIcon className=" cursor-pointer " />
+                                <div className="flex items-center justify-between gap-2 text-sm">
+                                    <EyeIcon className=" cursor-pointer w-5 h-5" />
                                     <span className="">Hide</span>
                                 </div>
                             </div>
                             <div className="relative">
-                                <Input type="password" color={`${mode === "dark" ? "white" : "black"}`} label="Password" />
-
+                                <label htmlFor="email" className="block text-inherit mb-2">
+                                    Password
+                                </label>
+                                <input className={`outline-none border-2 w-full p-2 ${theme[mode].border} bg-transparent rounded-lg text-inherit`} type="password" />
                             </div>
                         </div>
-                        <Button className="w-full bg-[#B6B6B6] text-black py-3 rounded-full font-normal  mt-4 ">Sign in</Button>
-                        <div className="flex items-center justify-between mt-4">
+                        <button className="w-full bg-[#B6B6B6] text-black py-3 rounded-full font-normal  mt-4 ">Sign in</button>
+                        <div className="flex items-center justify-between mt-4 text-sm">
                             <div className="flex items-center">
-                                <Checkbox id="remember" />
+                                <input type="checkbox" className=" accent-black" id="remember" />
                                 <label htmlFor="remember" className=" ml-2">
                                     Remember me
                                 </label>
@@ -81,16 +84,16 @@ export default function SignIn() {
                             </a>
                         </div>
                     </form>
-                    <div className="mt-6 text-start ">
-                        <Typography variant="small" className="flex gap-2">
+                    <div className="mt-6 text-start text-sm">
+                        <p className="flex gap-2">
                             Don&apos;t have an account?{" "}
-                            <Typography variant="small" className="font-semibold underline" >
+                            <span className={`font-semibold underline ${theme[mode].heading}`} >
                                 Sign up
-                            </Typography>
-                        </Typography>
-                        <Typography variant="small" className="mt-2">This page is protected by Google reCAPTCHA to ensure you&apos;re not a bot.  <span className="font-semibold " >
+                            </span>
+                        </p>
+                        <span className="mt-2">This page is protected by Google reCAPTCHA to ensure you&apos;re not a bot.  <span className={`font-semibold underline ${theme[mode].heading}`} >
                             Learn More
-                        </span></Typography>
+                        </span></span>
                     </div>
 
                 </div>

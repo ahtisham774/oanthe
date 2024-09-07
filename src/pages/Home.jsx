@@ -1,23 +1,29 @@
+import { useState } from "react"
+import { TopNavbar } from "../components/Navbar"
+import Hero from "../components/Hero"
+import MakeItSimple from "../components/MakeItSimple"
 
 
 const Home = () => {
+  const [mode, setMode] = useState("light")
+  const theme = {
+    light: {
+      bg: "bg-[#f0f0f0]",
+    },
+    dark: {
+      bg: "bg-[#0A1221]",
+    },
+  }
   return (
-    <div className="bg-black">
-        <img src="/assets/loin.png" className="mix-blend-overlay " alt="" />
-        <h1 className="mix-blend-difference">Hello</h1>
-        <img src="/assets/loin.png" className="mix-blend-screen " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-darken " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-lighten " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-color-burn " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-color-dodge " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-hard-light " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-difference " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-hue " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-saturation " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-luminosity " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-hue " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-hue " alt="" />
-        <img src="/assets/loin.png" className="mix-blend-hue " alt="" />
+    <div className="w-full  flex flex-col pt-[53px]  min-h-[calc(100dvh)]">
+      <TopNavbar mode={mode} handleChangeMode={() => setMode(prev => prev == "light" ? "dark" : "light")} />
+      <div className={`flex flex-col h-full w-full ${theme[mode].bg}`}>
+        <Hero  mode={mode} />
+        <MakeItSimple mode={mode}/>
+      </div>
+
+      {/* <div className="h-screen"></div>
+      <div className="h-screen"></div> */}
     </div>
   )
 }
