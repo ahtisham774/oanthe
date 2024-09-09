@@ -18,7 +18,7 @@ const MakeItSimple = ({ mode }) => {
     }
     return (
         <div className={`w-full h-full py-8 px-4 lg:px-12 flex items-center justify-center`} >
-            <div className={`w-full  flex flex-col md:flex-row max-w-6xl items-center justify-between  rounded-3xl ${theme[mode].bg} ${theme[mode].text} transition-all`}>
+            <div className={`w-full  flex flex-col overflow-hidden md:flex-row max-w-5xl items-center justify-between  rounded-3xl ${theme[mode].bg} ${theme[mode].text} transition-all`}>
                 <div className="w-full">
                     <img src="/assets/tiger.png" className="sm:max-w-[400px]" alt="" />
                 </div>

@@ -4,6 +4,12 @@ import Hero from "../components/Hero"
 import MakeItSimple from "../components/MakeItSimple"
 import CertifiedCourses from "../components/CertifiedCourses"
 import GridCards from "../components/gridCards"
+import MoveTheNeedle from "../components/moveTheNeedle"
+import MakeTheMostOfYourTime from "../components/makeTheMostOfYourTime"
+import ShowImage from "../components/showImage"
+import NewLetter from "../components/newLetter"
+import Footer from "../components/footer"
+import CopyRight from "../components/copyRight"
 
 
 const Home = () => {
@@ -24,6 +30,12 @@ const Home = () => {
         <MakeItSimple mode={mode} />
         <CertifiedCourses />
         <GridCards mode={mode} />
+        <MoveTheNeedle mode={mode} />
+        <MakeTheMostOfYourTime />
+        <ShowImage />
+        <NewLetter />
+        <Footer mode={mode} />
+        <CopyRight />
       </div>
 
       {/* <div className="h-screen"></div>

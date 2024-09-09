@@ -19,8 +19,8 @@ const Hero = ({ mode }) => {
         },
     }
     return (
-        <div className={`w-full h-full px-4 lg:px-12`}>
-            <div className={`w-full  flex items-center  py-20 rounded-3xl justify-center ${theme[mode].bg} ${theme[mode].text} transition-all`}>
+        <div className={`w-full h-full py-8 px-4 lg:px-12 flex items-center justify-center`}>
+            <div className={`w-full  flex items-center max-w-5xl  py-20 rounded-4xl justify-center ${theme[mode].bg} ${theme[mode].text} transition-all`}>
                 <div className="flex w-full max-w-xl  flex-col items-end justify-center  relative">
                     <div className=" absolute -top-5 sm:top-0 sm:-right-5 translate-y-0">
                         <LionHero color={theme[mode].lion_color} width={200} height={100} opacity={theme[mode].opacity} />
